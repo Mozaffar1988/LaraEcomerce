@@ -14,18 +14,15 @@ use App\Http\Controllers;
 */
 
 Route::get('/', 'App\Http\Controllers\PagesController@index')->name('index');
-
 //Route::get('/', 'App\Http\Controllers\UserController@index');
 Route::get('/contact','App\Http\Controllers\PagesController@contact')->name('contact');
-
 Route::get('/product','App\Http\Controllers\PagesController@product')->name('product');
-
 Route::group(['prefix'=>'admin'],function(){
 /*
 Route::get('/','App\Http\Controllers\AdminPagesController@Admin')->name('Admin.index');
 Route::get('/product/create','App\Http\Controllers\AdminPagesController@create')->name('Admin.product.create');
 */
 
-Route::get('/','App\Http\Controllers\AdminPagesController@admin');
-Route::get('/product/create','App\Http\Controllers\AdminPagesController@create');
+Route::get('/','App\Http\Controllers\AdminPagesController@index')->name('admin.index');
+Route::get('/product/create','App\Http\Controllers\AdminPagesController@create')->name('create');
 });
