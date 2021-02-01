@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Star Admin Premium Bootstrap Admin Dashboard Template</title>
+    <title>Admin Page</title>
     <!-- plugins:css -->
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -30,47 +30,13 @@
       <!-- partial:partials/_navbar.html -->
       <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-          <a class="navbar-brand brand-logo" href="index.html">
+          <a class="navbar-brand brand-logo" href="{{ route('admin.index') }}">
             <img src="assets/images/logo.svg" alt="logo" /> </a>
-          <a class="navbar-brand brand-logo-mini" href="index.html">
+          <a class="navbar-brand brand-logo-mini" href="{{ route('admin.index') }}">
             <img src="assets/images/logo-mini.svg" alt="logo" /> </a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center">
-          <ul class="navbar-nav">
-            <li class="nav-item font-weight-semibold d-none d-lg-block">Help : +050 2992 709</li>
-            <li class="nav-item dropdown language-dropdown">
-              <a class="nav-link dropdown-toggle px-2 d-flex align-items-center" id="LanguageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                <div class="d-inline-flex mr-0 mr-md-3">
-                  <div class="flag-icon-holder">
-                    <i class="flag-icon flag-icon-us"></i>
-                  </div>
-                </div>
-                <span class="profile-text font-weight-medium d-none d-md-block">English</span>
-              </a>
-              <div class="dropdown-menu dropdown-menu-left navbar-dropdown py-2" aria-labelledby="LanguageDropdown">
-                <a class="dropdown-item">
-                  <div class="flag-icon-holder">
-                    <i class="flag-icon flag-icon-us"></i>
-                  </div>English
-                </a>
-                <a class="dropdown-item">
-                  <div class="flag-icon-holder">
-                    <i class="flag-icon flag-icon-fr"></i>
-                  </div>French
-                </a>
-                <a class="dropdown-item">
-                  <div class="flag-icon-holder">
-                    <i class="flag-icon flag-icon-ae"></i>
-                  </div>Arabic
-                </a>
-                <a class="dropdown-item">
-                  <div class="flag-icon-holder">
-                    <i class="flag-icon flag-icon-ru"></i>
-                  </div>Russian
-                </a>
-              </div>
-            </li>
-          </ul>
+          
           <form class="ml-auto search-form d-none d-md-block" action="#">
             <div class="form-group">
               <input type="search" class="form-control" placeholder="Search Here">
@@ -197,11 +163,31 @@
             </li>
             <li class="nav-item nav-category">Main Menu</li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">
+              <a class="nav-link" href="{{ route('admin.index') }}">
                 <i class="menu-icon typcn typcn-document-text"></i>
                 <span class="menu-title">Dashboard</span>
               </a>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <i class="menu-icon typcn typcn-coffee"></i>
+                <span class="menu-title">Manage Products</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('admin.product.create')}}">Create Products</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{route('admin.products')}}">Manage Products</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </li>
+
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <i class="menu-icon typcn typcn-coffee"></i>
@@ -213,12 +199,7 @@
                   <li class="nav-item">
                     <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/ui-features/typography.html">Typography</a>
-                  </li>
+                  
                 </ul>
               </div>
             </li>
@@ -274,6 +255,7 @@
             </li>
           </ul>
         </nav>
+       
         @yield('content')
       </div>
       <!-- page-body-wrapper ends -->

@@ -14,7 +14,7 @@
           <h3>Feature Product</h3>
             <div class="row">
             @foreach ($productall as $products)        
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                       <div class="card" >
                       @php
                       $i=1;
