@@ -12,7 +12,6 @@
           <a href="#" class="list-group-item">Third item</a>
         </div>
     </div>
-
     <div class="col-md-8">         
         <div class="widget">
           <h3>Feature Product</h3>
@@ -86,15 +85,12 @@
                               <a href="#" class="btn btn-primary">dd To Card</a>
                           </div>
                       </div>
-                  </div>
-                
+                  </div>              
             </div>
         </div>
-        <div class="widget">
-               
+        <div class="widget">              
         </div>
     </div>
   </div>
-
 <!--End Sidebar + Content -->
 @endsection

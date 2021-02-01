@@ -24,5 +24,7 @@ Route::get('/product/create','App\Http\Controllers\AdminPagesController@create')
 */
 
 Route::get('/','App\Http\Controllers\AdminPagesController@index')->name('admin.index');
-Route::get('/product/create','App\Http\Controllers\AdminPagesController@create')->name('create');
+Route::get('/product/create','App\Http\Controllers\AdminPagesController@product_create')->name('admin.product.create');
+Route::post('/product/create','App\Http\Controllers\AdminPagesController@product_store')->name('admin.product.store');
+
 });
