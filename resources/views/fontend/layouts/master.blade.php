@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laravel Ecomerce Project</title>
     
-    @include('partial.style')
+    @include('fontend.partial.style')
 </head>
 <body>
 
 <div class="wrapper">
 {{--Navigation--}}
-  @include('partial.nav')
+  @include('fontend.partial.nav')
   @yield('content')
-  @include('partial.footer')
+  @include('fontend.partial.footer')
 
   </div>
-  @include('partial.scrips')
+  @include('fontend.partial.scrips')
 </body>
 </html>

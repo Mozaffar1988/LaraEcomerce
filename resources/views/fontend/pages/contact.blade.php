@@ -1,4 +1,4 @@
-@extends ('layouts.master')
+@extends ('fontend.layouts.master')
 
 @section('content')
 <div class='container margin-top-20'> 

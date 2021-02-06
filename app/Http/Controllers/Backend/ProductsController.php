@@ -1,13 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Backend;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use Image;
 use App\Models\ProductImage;
 use Illuminate\Support\Facades\DB;
-class AdminProductController extends Controller
+use App\Http\Controllers\Controller;
+
+class ProductsController extends Controller
 {
   /*
     public function index()
@@ -19,11 +21,11 @@ class AdminProductController extends Controller
     {
         //return view('admin.pages.product.index');
         $products =Product::orderBy('id','desc')->get();
-        return view('admin.pages.product.index')->with('product',$products);
+        return view('backend.pages.product.index')->with('product',$products);
     }
     public function create()
     {
-        return view('admin.pages.product.create');
+        return view('backend.pages.product.create');
     }
 
     
@@ -32,7 +34,7 @@ class AdminProductController extends Controller
     {
         
         $products =Product::find($id);
-        return view('admin.pages.product.edit')->with('product',$products);
+        return view('backend.pages.product.edit')->with('product',$products);
     }
 
   public function store(Request  $request)

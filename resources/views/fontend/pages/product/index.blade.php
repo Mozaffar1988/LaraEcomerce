@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('fontend.layouts.master')
 
 @section('content')
 
@@ -6,7 +6,7 @@
 <div class="container margin-top-20">
   <div class="row">
     <div class="col-md-4">
-    @include('partial.product-sidebar')
+    @include('fontend.partial.product-sidebar')
     </div>
 
     <div class="col-md-8">         
