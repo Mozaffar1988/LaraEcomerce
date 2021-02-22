@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,6 +44,23 @@ Route::group(['prefix'=>'/products'],function(){
     Route::post('/store','App\Http\Controllers\Backend\ProductsController@store')->name('admin.product.store');
     Route::post('/edit/{id}','App\Http\Controllers\Backend\ProductsController@update')->name('admin.product.update');
     Route::post('/delete/{id}','App\Http\Controllers\Backend\ProductsController@delete')->name('admin.product.delete');
+
+    });
+
+
+
+    //Categories Routes
+Route::group(['prefix'=>'/categories'],function(){
+
+    Route::get('/','App\Http\Controllers\Backend\CategoriesController@index')->name('admin.Categories');
+    Route::get('/create','App\Http\Controllers\Backend\CategoriesController@create')->name('admin.Category.create');
+    Route::post('/store','App\Http\Controllers\Backend\CategoriesController@store')->name('admin.categories.store');
+    /*
+    Route::get('/edit/{id}','App\Http\Controllers\Backend\CategoriesController@edit')->name('admin.Category.edit');
+    Route::post('/store','App\Http\Controllers\Backend\CategoriesController@store')->name('admin.Category.store');
+    Route::post('/category/edit/{id}','App\Http\Controllers\Backend\CategoriesController@update')->name('admin.Category.update');
+    Route::post('/category/delete/{id}','App\Http\Controllers\Backend\CategoriesController@delete')->name('admin.Category.delete');
+    */
 
     });
 

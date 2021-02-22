@@ -1,14 +1,14 @@
 <?php
-
 namespace App\Http\Controllers\Backend;
-use Illuminate\Support\Str;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use App\Models\Catgory;
-use Image;
-use Illuminate\Support\Facades\DB;
+//use Image;
+//use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
-class CategoriesController extends Controller
+class Category extends Controller
 {
     public function index()
     {       
@@ -30,11 +30,12 @@ class CategoriesController extends Controller
     public function store(Request $request)
     {
      // return
+     /*
        $this->validate($request,[
         'name' =>'required',
         'image' =>'nullable|image',
       ]);
-      
+      */
       $category = new category;
       $category->name=$request->name;
       $category->description=$request->description;
@@ -43,5 +44,4 @@ class CategoriesController extends Controller
       return redirect()->route('admin.categories.index');
 
     }
-    
 }
